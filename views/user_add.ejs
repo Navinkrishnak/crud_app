@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+            /* width: 80%; */
+            /* max-width: 1200px; */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: lightgray;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            }
+
+            table {
+            background-color: lightgray;
+            color: black;
+            border-collapse:collapse; 
+            
+            }
+
+             th, td {
+                padding: 20px;
+                border: 1px solid black;
+                font-size: 18px;
+            }
+            button {
+                background-color: gray;
+                border: 1px solid black;
+                color: black;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px;
+                cursor: pointer;
+                }
+            form{
+                background-color: gray;
+                border: none;
+                color: black;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="container">
+
+        <h2><%= title %></h2>
+        <form action="/save" method="post">
+            <div class = "form">
+                <label for="name">Name:</label>
+                <input type="text" class="form" id="email" placeholder="Enter your name" name="name" required>
+            </div><br><br>
+            <div class = "form">
+                <label for="email">Email:</label>
+                <input type="email" class="form" id="email" placeholder="Enter your email" name="email" required>
+            </div><br><br>
+            <div class = "form">
+                <label for="phone">Phone no:</label>
+                <input type="text" class="form" id="pwd" placeholder="Enter your phone no" name="phone_no" required>
+            </div><br><br>
+            <button type="submit" class="button">submit</button>
+        </form>
+        
+    </div>
+    
+    </body>
+</html>

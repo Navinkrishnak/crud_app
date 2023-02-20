@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+            /* width: 80%; */
+            /* max-width: 1200px; */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: lightgray;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            }
+
+            table {
+            background-color: grey;
+            color: black;
+            border-collapse:collapse;
+            }
+
+             th, td {
+                padding: 20px;
+                border: 1px solid black;
+                font-size: 18px;
+            }
+            button {
+                background-color: lightgray;
+                /* border: none; */
+                color: black;
+                padding: 10px 20px;
+                text-align: center;
+                /* text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px;
+                cursor: pointer; */
+                }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="container">
+        <a href = "/add" class="button"><button>Add User</button></a>
+
+        <h2><%= title %></h2>   
+        <table class="table">
+            <thead>
+                <tr>
+                    <!-- <th>Id</th> -->
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone no.</th>
+                    <th>Action</th>
+                    
+                </tr>
+                
+            </thead>
+            <tbody>
+                <% users.forEach(function(user){ %>
+                    <tr>
+                        <!-- <td><%= user.id %></td> -->
+                        <td><%= user.name %></td>
+                        <td><%= user.email %></td>
+                        <td><%= user.phone_no %></td>
+                        
+                        <td>
+                            <a href = "edit/<%= user.id %>"><button class="button">Edit</button></a>
+                            <a href = "delete/<%= user.id %>"><button class="button">Delete</button></a>
+                        </td>
+                    </tr>
+             <%   }); %>
+            </tbody>
+        </table>
+    </div>
+    
+    </body>
+</html>
